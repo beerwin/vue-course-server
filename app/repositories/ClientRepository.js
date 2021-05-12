@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 
 class ClientRepository {
     constructor() {
-        this.filePath = '../data/data.json';
+        this.filePath = 'app/data/data.json';
     }
 
     async index() {
@@ -38,7 +38,6 @@ class ClientRepository {
     }
 
     loadFile() {
-        this.data = JSON.stringify();
         return new Promise((resolve, reject) => {
             fs.readFile(this.filePath, 'utf8', (err, data) => {
                 if (err) {
@@ -60,3 +59,5 @@ class ClientRepository {
         })
     }
 }
+
+module.exports = new ClientRepository();

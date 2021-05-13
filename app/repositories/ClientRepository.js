@@ -12,9 +12,11 @@ class ClientRepository {
 
     async create(item) {
         const data = await this.loadFile();
+        console.log('dededee');
         item.id = uuidv4();
         data.push(item);
-        await this.loadFile()
+        await this.saveFile(data);
+        return item.id;
     }
 
     async read(id) {
@@ -25,10 +27,6 @@ class ClientRepository {
 
     async update(id, item) {
         const data = await this.loadFile();
-        const filteredData = data.filter(i => i.id === id);
-        if (filteredData.length === 0) {
-            throw new Error("Item not Found");
-        }
         await this.saveFile(data.map(i => i.id === id ? item : i));
     }
 
@@ -50,7 +48,7 @@ class ClientRepository {
 
     saveFile(data) {
         return new Promise((resolve, reject) => {
-            fs.writeFile(this.filePath, JSON.stringify(this.data), 'utf8', (err) => {
+            fs.writeFile(this.filePath, JSON.stringify(data), 'utf8', (err) => {
                 if (err) {
                     return reject(err);
                 }

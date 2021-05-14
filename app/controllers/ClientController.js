@@ -12,9 +12,7 @@ const ClientController = {
         res.send(item);
     },
     create: async (req, res, next) => {
-        // res.sendStatus(201);
-        // TODO: return the id got from create
-        res.status(201).send({id: ClientRepository.create(req.body)});
+        res.status(201).send({id: await ClientRepository.create(req.body)});
     },
     update: async (req, res, next) => {
         let item = await ClientRepository.read(req.params.client);

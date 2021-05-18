@@ -1,1 +1,38 @@
-[{"id":"123242335234523452","name":"One Client","description":"Something silly"},{"name":"Two Client","description":"Something silly 2","id":"26fd91b4-875d-4858-99ad-86141238500b"},{"name":"Woo Client","description":"Something silly 2","id":"23b81920-e721-497f-8007-007acb5a6526"},{"name":"Foo Client","description":"Something silly 2","id":"cb70bd16-acee-4e2a-80f3-0a4a0e3a9383"}]
+[
+  {
+    "id": "123242335234523452",
+    "name": "One Client",
+    "description": "Something silly",
+    "createdAt": 1621054598164
+  },
+  {
+    "name": "Two Client",
+    "description": "Something silly 2",
+    "id": "26fd91b4-875d-4858-99ad-86141238500b",
+    "createdAt": 1621154598164
+  },
+  {
+    "name": "Woo Client",
+    "description": "Something silly 2",
+    "id": "23b81920-e721-497f-8007-007acb5a6526",
+    "createdAt": 1621254598164
+  },
+  {
+    "name": "Foo Client",
+    "description": "Something silly 2",
+    "id": "cb70bd16-acee-4e2a-80f3-0a4a0e3a9383",
+    "createdAt": 1621334598164
+  },
+  {
+    "name": "Boo Client",
+    "description": "Something silly 2",
+    "id": "5dc44b40-562f-476e-aac3-706e768c4597",
+    "createdAt": 1621344598164
+  },
+  {
+    "name": "Baz Client",
+    "description": "Something silly 4",
+    "id": "b697e9f9-d7a3-4944-b094-2dc29a3e2fcc",
+    "createdAt": 1621354598164
+  }
+]

@@ -12,8 +12,8 @@ class ClientRepository {
 
     async create(item) {
         const data = await this.loadFile();
-        console.log('dededee');
         item.id = uuidv4();
+        item.createdAt = new Date().getTime();
         data.push(item);
         await this.saveFile(data);
         return item.id;
